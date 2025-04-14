@@ -1,12 +1,12 @@
 {
-	"default": {
-		"vcpkg-cmake": {
-			"baseline": "2024-04-23",
-			"port-version": 0
-		},
-		"avro-c": {
-			"baseline": "1.0.0",
-			"port-version": 0
-		}
-	}
+  "default": {
+    "avro-c": {
+      "baseline": "1.11.3",
+      "port-version": 0
+    },
+    "vcpkg-cmake": {
+      "baseline": "2024-04-23",
+      "port-version": 0
+    }
+  }
 }
