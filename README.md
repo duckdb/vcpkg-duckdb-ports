@@ -8,3 +8,7 @@
 ```bash
 vcpkg --x-builtin-ports-root=./ports --x-builtin-registry-versions-dir=./versions x-add-version <name> --verbose
 ```
+
+
+#### NOTE:
+To test an added port, it needs to merged into the `main` branch of your fork.
