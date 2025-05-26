@@ -27,6 +27,7 @@ vcpkg_from_github(
     PATCHES
         avro.patch          # Private vcpkg build fixes
         duckdb.patch          # expose avro_file_reader_reader
+        field_id.patch        # add the 'avro_schema_record_field_id' method
         ${OPTIONAL_DUCKDB_PATCHES}
 )
 
