@@ -52,7 +52,7 @@ index c9d4dfeb6..ce7f41740 100644
  	if (meta_iface == NULL) {
  		return EILSEQ;
 diff --git a/lang/c/src/schema.c b/lang/c/src/schema.c
-index 7b389002b..5c155e4e2 100644
+index 7b389002b..61dd67eab 100644
 --- a/lang/c/src/schema.c
 +++ b/lang/c/src/schema.c
 @@ -182,6 +182,9 @@ static void avro_schema_free(avro_schema_t schema)
@@ -232,7 +232,7 @@ index 7b389002b..5c155e4e2 100644
 +			json_t *json_element_id = json_object_get(json, "element-id");
 +			json_t *json_logical_type = json_object_get(json, "logicalType");
  			avro_schema_t items_schema;
-+			char *logical_type = NULL;
++			const char *logical_type = NULL;
 +			int32_t element_id = INT32_MAX;
  			if (!json_items) {
  				avro_set_error("Array type must have \"items\"");
