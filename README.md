@@ -8,3 +8,16 @@
 ```bash
 vcpkg --x-builtin-ports-root=./ports --x-builtin-registry-versions-dir=./versions x-add-version <name> --verbose
 ```
+
+#### How to update an existing port
+
+1. Add relevant files / change existing files
+2. Increment the `port-version` in `ports/<n>-/<name>.json`
+3. Increment the `port-version` in `versions/baseline.json` for the <name> entry
+4. Run (from the root of the repo):
+```bash
+vcpkg --x-builtin-ports-root=./ports --x-builtin-registry-versions-dir=./versions x-add-version <name> --verbose
+```
+
+#### NOTE:
+To test an added port, it needs to merged into the `main` branch of your fork.
