@@ -31,7 +31,7 @@ index ffbb68dc5..06253fe48 100644
  int avro_file_writer_open_bs(const char *path, avro_file_writer_t * writer, size_t block_size);
  int avro_file_reader(const char *path, avro_file_reader_t * reader);
 diff --git a/lang/c/src/datafile.c b/lang/c/src/datafile.c
-index c9d4dfeb6..6795ff06a 100644
+index c9d4dfeb6..45d8084ee 100644
 --- a/lang/c/src/datafile.c
 +++ b/lang/c/src/datafile.c
 @@ -238,6 +238,43 @@ int avro_file_writer_create_with_codec_fp(FILE *fp, const char *path, int should
@@ -83,7 +83,7 @@ index c9d4dfeb6..6795ff06a 100644
  			     "Cannot write file block count: ");
  		/* Encode the block */
 -		check_prefix(rval, avro_codec_encode(w->codec, w->datum_buffer, w->block_size),
-+		check_prefix(rval, avro_codec_encode(w->codec, avro_writer_buf(w->datum_writer), w->block_size),
++		check_prefix(rval, avro_codec_encode(w->codec, (void *)avro_writer_buf(w->datum_writer), w->block_size),
  			     "Cannot encode file block: ");
  		/* Write the block length */
  		check_prefix(rval, enc->write_long(w->writer, w->codec->used_size),
