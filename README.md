@@ -12,7 +12,7 @@ vcpkg --x-builtin-ports-root=./ports --x-builtin-registry-versions-dir=./version
 #### How to update an existing port
 
 1. Add relevant files / change existing files
-2. Increment the `port-version` in `ports/<n>-/<name>.json`
+2. Increment the `port-version` in `ports/<name>/vcpkg.json`
 3. Increment the `port-version` in `versions/baseline.json` for the <name> entry
 4. Run (from the root of the repo):
 ```bash
