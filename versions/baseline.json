@@ -14,7 +14,7 @@
     },
     "vcpkg-cmake": {
       "baseline": "2024-04-24",
-      "port-version": 5
+      "port-version": 6
     }
   }
 }

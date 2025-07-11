@@ -1,7 +1,7 @@
 {
   "name": "vcpkg-cmake",
   "version-date": "2024-04-24",
-  "port-version": 5,
+  "port-version": 6,
   "documentation": "https://learn.microsoft.com/vcpkg/maintainers/functions/vcpkg_cmake_configure",
   "license": "MIT"
 }
