@@ -24,6 +24,8 @@ message(STATUS "Hi from vcpkg-cmake")
 	      "${CMAKE_CXX_FLAGS} /D_DISABLE_CONSTEXPR_MUTEX_CONSTRUCTOR")
 	set(VCPKG_CXX_FLAGS
 	      "${VCPKG_CXX_FLAGS} /D_DISABLE_CONSTEXPR_MUTEX_CONSTRUCTOR")
+	set(VCPKG_C_FLAGS
+	      "${VCPKG_C_FLAGS} /D_DISABLE_CONSTEXPR_MUTEX_CONSTRUCTOR")
 
 function(vcpkg_cmake_configure)
     cmake_parse_arguments(PARSE_ARGV 0 "arg"
