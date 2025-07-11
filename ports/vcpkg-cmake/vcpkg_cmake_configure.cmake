@@ -18,10 +18,13 @@ if (VCPKG_TARGET_IS_EMSCRIPTEN)
    set(VCPKG_CROSSCOMPILING 1)
 endif()
 
-if (VCPKG_TARGET_IS_WINDOWS)
+
+message(STATUS "Hi from vcpkg-cmake")
 	set(CMAKE_CXX_FLAGS
 	      "${CMAKE_CXX_FLAGS} /D_DISABLE_CONSTEXPR_MUTEX_CONSTRUCTOR")
-endif()
+	set(VCPKG_CXX_FLAGS
+	      "${VCPKG_CXX_FLAGS} /D_DISABLE_CONSTEXPR_MUTEX_CONSTRUCTOR")
+        add_definitions(/D_DISABLE_CONSTEXPR_MUTEX_CONSTRUCTOR)
 
 function(vcpkg_cmake_configure)
     cmake_parse_arguments(PARSE_ARGV 0 "arg"
