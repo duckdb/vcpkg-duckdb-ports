@@ -25,7 +25,7 @@ if (VCPKG_TARGET_IS_WINDOWS)
 endif()
 
 if (VCPKG_TARGET_IS_OSX)
-   set(CMAKE_OSX_DEPLOYMENT_TARGET 11.0 CACHE STRING "Minimum OS X deployment version" FORCE)
+   set(VCPKG_OSX_DEPLOYMENT_TARGET 11.0 CACHE STRING "Minimum OS X deployment version" FORCE)
 endif()
 
 function(vcpkg_cmake_configure)
